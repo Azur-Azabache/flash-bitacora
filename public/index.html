@@ -15,7 +15,7 @@
 <body class="fondo">
   <h4 class="center font">Bitácora Personal</h4>
   <!-- Input -->
-  <div class="row ">
+  <div class="row">
     <form class="col s6 offset-s3">
       <!-- Input de texto -->
       <div class="row input-text">
@@ -28,7 +28,30 @@
         <form action="#">
           <div id="contentInput2" class="hide file-field input-field">
             <div class="btn">
-              <span>File</span>
+              <span>Imagen</span>
+              <input id="file" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input id="path" class="file-path validate" type="text" placeholder="Carga tu imagen">
+            </div>
+          </div>
+        </form>
+        <!-- Termina input de imagen -->
+        <!-- Input de Evento -->
+        <div id="contentEvent" class="hide">
+        <div id="inputEvent2" class="input-field col s12">
+          <input placeholder="¿Qué sucede este día?" id="first_name" type="text" class="validate">
+          <label for="first_name">Título</label>
+        </div>
+        <h6 id="textEvent"><strong>Haz click para marcar una fecha:</strong></h6>
+        <input id="inputEvent" type="text" class="datepicker">
+        </div>
+        <!-- Termina Input de Evento -->
+        <!-- Input de video/audio-->
+        <form id="contentVideo" class="hide" action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Video/Audio</span>
               <input type="file" multiple>
             </div>
             <div class="file-path-wrapper">
@@ -36,8 +59,11 @@
             </div>
           </div>
         </form>
-        <!-- Termina input de imagen -->
+        <!-- Termina input de audio/video -->
         <a id="btnPost" class=" btn-publish waves-effect right waves-light btn disabled">Publicar</a>
+        <a id="btnPostImage" class=" btn-publish waves-effect right waves-light btn disabled hide">Subir imagen</a>
+        <a id="btnPostEvent" class=" btn-publish waves-effect right waves-light btn disabled hide">Marcar evento</a>
+        <a id="btnPostVideo" class=" btn-publish waves-effect right waves-light btn disabled hide">Subir video/audio</a>
       </div>
     </form>
   </div>
@@ -47,26 +73,10 @@
       <i class="large material-icons">mode_edit</i>
     </a>
     <ul>
-      <li>
-        <a id="postText" class="btn-floating red">
-          <i class="material-icons">message</i>
-        </a>
-      </li>
-      <li>
-        <a id="postImage" class="btn-floating yellow darken-1">
-          <i class="material-icons">image</i>
-        </a>
-      </li>
-      <li>
-        <a id="postEvent" class="btn-floating green">
-          <i class="material-icons">event</i>
-        </a>
-      </li>
-      <li>
-        <a id="postVideo" class="btn-floating blue">
-          <i class="material-icons">video_library</i>
-        </a>
-      </li>
+      <li><a id="postText" class="btn-floating red"><i class="material-icons">message</i></a></li>
+      <li><a id="postImage"class="btn-floating yellow darken-1"><i class="material-icons">image</i></a></li>
+      <li><a id="postEvent" class="btn-floating green"><i class="material-icons">event</i></a></li>
+      <li><a id="postVideo"class="btn-floating blue"><i class="material-icons">video_library</i></a></li>
     </ul>
   </div>
   <div class="row ">
@@ -76,6 +86,7 @@
       </div>
     </div>
   </div>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="vendors/moment.js"></script>
