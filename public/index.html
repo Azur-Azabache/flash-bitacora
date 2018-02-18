@@ -15,8 +15,8 @@
 <body class="fondo">
   <h4 class="center font">Bitácora Personal</h4>
   <!-- Input -->
-  <div class="row ">
-    <form class="col s6 offset-s3">
+  <div class="row">
+      <form class="col s6 offset-s3">
       <!-- Input de texto -->
       <div class="row input-text">
         <div id="contentInput" class="input-field col s11">
@@ -28,16 +28,17 @@
         <form action="#">
           <div id="contentInput2" class="hide file-field input-field">
             <div class="btn">
-              <span>File</span>
-              <input type="file" multiple>
+              <span>Imagen</span>
+              <input id="file" type="file" multiple>
             </div>
             <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" placeholder="Upload one or more files">
+              <input id="path" class="file-path validate" type="text" placeholder="Carga tu imagen">
             </div>
           </div>
         </form>
         <!-- Termina input de imagen -->
         <a id="btnPost" class=" btn-publish waves-effect right waves-light btn disabled">Publicar</a>
+        <a id="btnPostImage" class=" btn-publish waves-effect right waves-light btn disabled hide">Subir imagen</a>
       </div>
     </form>
   </div>
@@ -60,6 +61,7 @@
       </div>
     </div>
   </div>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="vendors/moment.js"></script>

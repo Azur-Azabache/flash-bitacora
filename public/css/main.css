@@ -26,11 +26,6 @@ padding: 1.5rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
-.containerPosts{
-  background-color: #936004;
-  border-radius: 5px;
-  padding: 1rem;
-}
 .postear{
   background-color: white;
   border-radius: 5px;
@@ -39,4 +34,7 @@ padding: 1.5rem;
 }
 .date{
   float: right;
+}
+.imageUpload{
+  width: 70%;
 }
