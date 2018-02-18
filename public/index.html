@@ -5,19 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FLASH BITÁCORA</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title>Flash Bitácora</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen|Pacifico" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="fondo">
+  <h4 class="center font">Bitácora Personal</h4>
+  <!-- Input -->
+  <div class="row ">
+    <form class="col s6 offset-s3">
+      <!-- Input de texto -->
+      <div class="row input-text">
+        <div id="contentInput" class="input-field col s11">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Algo que anotar...</label>
+        </div>
+        <!-- Input de imagen -->
+        <form action="#">
+          <div id="contentInput2" class="hide file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Upload one or more files">
+            </div>
+          </div>
+        </form>
+        <!-- Termina input de imagen -->
+        <a id="btnPost" class=" btn-publish waves-effect right waves-light btn disabled">Publicar</a>
+      </div>
+    </form>
+  </div>
+  <!-- Boton FAB -->
+  <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a id="postText" class="btn-floating red"><i class="material-icons">message</i></a></li>
+      <li><a id="postImage"class="btn-floating yellow darken-1"><i class="material-icons">image</i></a></li>
+      <li><a id="postEvent" class="btn-floating green"><i class="material-icons">event</i></a></li>
+      <li><a id="postVideo"class="btn-floating blue"><i class="material-icons">video_library</i></a></li>
+    </ul>
+  </div>
+  <div class="row ">
+    <div class="col s6 offset-s3">
+      <div id="container-posts">
 
-
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+      </div>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="vendors/moment.js"></script>
   <script src="js/app.js"></script>
 </body>
 

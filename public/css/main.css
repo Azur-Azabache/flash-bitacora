@@ -5,6 +5,38 @@
 }
 
 body{
-  font-family:Raleway,sans-serif;
-
+  font-family: 'Oxygen', sans-serif;
+  background: url(../assets/images/otoño.jpg) no-repeat center center fixed;
+	min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+.font{
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 3rem;
+}
+.input-text{
+background-color: white;
+border-radius: 0.5rem;
+padding: 1.5rem;
+}
+.btn-publish{
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.containerPosts{
+  background-color: #936004;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.postear{
+  background-color: white;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+}
+.date{
+  float: right;
 }
