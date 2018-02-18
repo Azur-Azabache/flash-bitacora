@@ -1,0 +1,25 @@
+{
+  "name": "flash-bitacora",
+  "version": "1.0.0",
+  "description": "Vamos a crear una bitácora con la que podrás agregar mensajes, imágenes, audio, video, ubicaciones y fechas.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jymmak/flash-bitacora.git"
+  },
+  "author": "Pamela Rojas & Jymma Mogollon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jymmak/flash-bitacora/issues"
+  },
+  "homepage": "https://github.com/jymmak/flash-bitacora#readme"
+}
