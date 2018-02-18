@@ -16,7 +16,7 @@
   <h4 class="center font">Bitácora Personal</h4>
   <!-- Input -->
   <div class="row">
-      <form class="col s6 offset-s3">
+    <form class="col s6 offset-s3">
       <!-- Input de texto -->
       <div class="row input-text">
         <div id="contentInput" class="input-field col s11">
@@ -29,7 +29,7 @@
           <div id="contentInput2" class="hide file-field input-field">
             <div class="btn">
               <span>Imagen</span>
-              <input id="file" type="file" multiple>
+              <input id="file" type="file">
             </div>
             <div class="file-path-wrapper">
               <input id="path" class="file-path validate" type="text" placeholder="Carga tu imagen">
@@ -37,8 +37,33 @@
           </div>
         </form>
         <!-- Termina input de imagen -->
+        <!-- Input de Evento -->
+        <div id="contentEvent" class="hide">
+        <div id="inputEvent2" class="input-field col s12">
+          <input placeholder="¿Qué sucede este día?" id="first_name" type="text" class="validate">
+          <label for="first_name">Título</label>
+        </div>
+        <h6 id="textEvent"><strong>Haz click para marcar una fecha:</strong></h6>
+        <input id="inputEvent" type="text" class="datepicker">
+        </div>
+        <!-- Termina Input de Evento -->
+        <!-- Input de video/audio-->
+        <form id="contentVideo" class="hide" action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Video/Audio</span>
+              <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Upload one or more files">
+            </div>
+          </div>
+        </form>
+        <!-- Termina input de audio/video -->
         <a id="btnPost" class=" btn-publish waves-effect right waves-light btn disabled">Publicar</a>
         <a id="btnPostImage" class=" btn-publish waves-effect right waves-light btn disabled hide">Subir imagen</a>
+        <a id="btnPostEvent" class=" btn-publish waves-effect right waves-light btn disabled hide">Marcar evento</a>
+        <a id="btnPostVideo" class=" btn-publish waves-effect right waves-light btn disabled hide">Subir video/audio</a>
       </div>
     </form>
   </div>
