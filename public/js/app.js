@@ -10,9 +10,11 @@ $(document).ready(function() {
   var $inputText= $('#contentInput');
   var $inputImage= $('#contentInput2');
   var $inputEvent= $('#inputEvent');
-
+  var video = 'blublu';
   var img = 'bleble';
+
   $textArea.focus();
+
   // Función para habilitar boton de post
   $textArea.on('input', function() {
     if ($textArea.val() === '') {
@@ -43,7 +45,7 @@ $btnPostImage.addClass('disabled');
   });
 
 //Para cargar imagenes
-  $('#file').on('change', function(event) {
+  $('#file').on('change', function (event) {
      var file = event.target.files[0];
      var fileReader = new FileReader();
      fileReader.onload = function(event2) {
@@ -67,10 +69,12 @@ $btnPostImage.addClass('disabled');
       text2= $('#first_name').val();
       eve = $inputEvent.val();
       console.log(eve);
-        $($container).prepend('<div class="postear"><span class="date">' + $date + '</span><br><br><span>'+ text2 +'</span><p>Día del Evento: '+eve+'</p></div>');
+        $($container).prepend('<div class="postear"><span class="date">' + $date + '</span><br><br><span>'+ text2 +'</span><p><strong>Día del Evento: '+eve+'</strong></p><br><div id="map"></div></div>');
+        initMap();
       $btnPostEvent.addClass('disabled');
       $inputEvent.val('');
       $('#first_name').val('');
+
   });
 
 //Datepicker
@@ -83,12 +87,31 @@ $btnPostImage.addClass('disabled');
     closeOnSelect: false // Close upon selecting a date,
   });
 
+//Para postear video o Audio
+$('#btnPostVideo').on('click', function(){
+  if (window.FileReader && window.FileList && $('#inputVideo').val() !== '') {
+      $($container).prepend('<div class="postear"><span class="date">' + $date + '</span><br><br><video src="'+ video +'" controls autoplay></video></div>');
+  }
+});
+
+$('#inputVideo').on('change', function (event) {
+   var fil = event.target.files[0];
+   var filReader = new FileReader();
+   filReader.onload = function(event2) {
+     video = event2.target.result;
+   };
+   $('#btnPostVideo').removeClass('disabled');
+   filReader.readAsDataURL(fil);
+   console.log($('#inputVideo').val());
+ });
+
+
 //Función para aparecer input de imagen
 $postImage.on('click', function(){
   $inputText.addClass('hide');
   $btnPostText.addClass('hide');
   $btnPostEvent.addClass('hide');
-  $('#contentEvent').removeClass('hide');
+  $('#contentEvent').addClass('hide');
   $inputImage.removeClass('hide');
   $btnPostImage.removeClass('hide');
   $('#btnPostVideo').addClass('hide');
@@ -100,7 +123,7 @@ $('#postText').on('click', function(){
     $inputText.removeClass('hide');
     $btnPostText.removeClass('hide');
     $btnPostEvent.addClass('hide');
-    $('#contentEvent').removeClass('hide');
+    $('#contentEvent').addClass('hide');
     $inputImage.addClass('hide');
     $btnPostImage.addClass('hide');
     $('#btnPostVideo').addClass('hide');
