@@ -35,7 +35,7 @@ Vamos a crear una bitácora con la que podrás agregar mensajes, imágenes, audi
 
 ## Producto
 
-![](public/assets/images/.png)
+![image](public/assets/images/producto.png)
 
 
 ## Licencia
